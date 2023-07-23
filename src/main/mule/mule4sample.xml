@@ -11,6 +11,8 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="mule4sampleFlow" doc:id="87842939-366f-4977-bca6-cb74f37527ce" >
 		<http:listener doc:name="Listener" doc:id="505ae488-9372-45e1-b1c8-2c97ebad9d44" config-ref="HTTP_Listener_config" path="/test"/>
+		<logger level="INFO" doc:name="Logger" doc:id="da038093-a0d7-41d0-b094-c5a96ac293a3" message="This is logger execution ${MY_PROPERTY}"/>
+
 		<logger level="INFO" doc:name="Logger" doc:id="da038093-a0d7-41d0-b094-c5a96ac293a3" message="#[payload]"/>
 	</flow>
 </mule>
